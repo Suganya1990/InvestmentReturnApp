@@ -1,1 +1,28 @@
-<p>user-input works!</p>
+<form action="">
+    <div class="input-group">
+        <p>
+            <label for="intialInvestment">Intial Investment</label>
+            <input type="text">
+        </p>
+
+
+        <p>
+            <label for="annualInvestment">Annual Investment</label>
+            <input type="text">
+        </p>
+    </div>
+    
+    <div class="input-group">
+        <p>
+            <label for="expectedReturn">Expected Return</label>
+            <input type="text">
+        </p>
+        <p>
+            <label for="duration">Duration</label>
+            <input type="text">
+        </p>
+    </div>
+    <button (submit)="onSubmit()"> Calculate </button>
+
+
+</form>

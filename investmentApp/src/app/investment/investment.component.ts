@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { InvestmentInput, InvestmentResult } from './investment.model';
 
 @Component({
   selector: 'app-investment',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './investment.component.css'
 })
 export class InvestmentComponent {
+  @Input() investmentResults: InvestmentResult[] = [];
+
+  
+
+
 
 }

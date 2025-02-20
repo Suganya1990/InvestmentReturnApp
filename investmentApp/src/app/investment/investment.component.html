@@ -1,1 +1,20 @@
-<p>investment works!</p>
+<div>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Investment Value</th>
+            <th>Interest(Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+        </tr>
+        @for (result of investmentResults; track result.year){
+            <tr>
+                <td>{{result.year}}</td>
+                <td>{{result.valueEndOfYear}}</td>
+                <td>{{result.interest}}</td>
+                <td>{{result.totalInterest}}</td>
+                <td>{{result.annualInvestment}}</td>
+            </tr>
+        }
+    </table>
+</div>

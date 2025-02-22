@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component,  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { InvestmentInput } from '../investment/investment.model';
+import { InvestmentService } from '../investment.services';
 @Component({
   selector: 'app-user-input',
   standalone: true,
@@ -13,11 +13,11 @@ export class UserInputComponent {
   enteredAnnualInvestment  = '0';
   enteredExpectedReturn='5';
   enteredDuration = '0';
-  @Output() calculate = new EventEmitter<InvestmentInput>()
+
+  constructor(private investmentService: InvestmentService){}
   onSubmit(){
 
-  
-    this.calculate.emit({initialInvestment: + this.enteredInitialInvestment,
+    this.investmentService.calculateInvestmentResults({initialInvestment: + this.enteredInitialInvestment,
       annualInvestment: + this.enteredAnnualInvestment,
       expectedReturn:  + this.enteredExpectedReturn,
       duration : +   this.enteredDuration})

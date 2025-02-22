@@ -12,4 +12,5 @@ export interface InvestmentResult{
     annualInvestment: number,
     totalInterest: number,
     totalAmountInvested: number;
+
 }
